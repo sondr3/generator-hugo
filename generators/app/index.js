@@ -1,6 +1,6 @@
 'use strict';
 var yeoman = require('yeoman-generator');
-var chalk = require('chalk');
+var clor = require('clor');
 var yosay = require('yosay');
 
 module.exports = yeoman.generators.Base.extend({
@@ -9,7 +9,7 @@ module.exports = yeoman.generators.Base.extend({
 
     // Have Yeoman greet the user.
     this.log(yosay(
-      'Welcome to the marvelous ' + chalk.red('Hugo') + ' generator!'
+      'Welcome to the marvelous ' + clor.red('Hugo') + ' generator!'
     ));
 
     var prompts = [{
