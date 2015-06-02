@@ -3,6 +3,7 @@
 var path = require('path');
 var gulp = require('gulp');
 var $ = require('gulp-load-plugins')();
+var trash = require('trash');
 
 var handleErr = function(err) {
   console.log(err.message);
@@ -28,7 +29,6 @@ function test(done) {
 
   gulp.src([
     'generators/**/index.js',
-    'gulpfile.js',
     'index.js'
   ])
   .pipe($.istanbul({
@@ -45,7 +45,6 @@ function test(done) {
         mochaErr = err;
       })
       .pipe($.istanbul.writeReports())
-      // .pipe($.istanbul.enforceThresholds({thresholds: {global: 90}}))
       .on('end', function() {
         done(mochaErr);
       });
@@ -61,4 +60,10 @@ function coveralls() {
     .pipe($.coveralls());
 }
 
-gulp.task('default', gulp.series(style, test, coveralls));
+function clean(done) {
+  trash(['test/tmp']);
+  done();
+}
+
+gulp.task('clean', clean);
+gulp.task('default', gulp.series(clean, style, test, coveralls));

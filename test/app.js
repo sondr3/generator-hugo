@@ -17,7 +17,9 @@ describe('hugo:app', function() {
       'bower.json',
       'package.json',
       '.editorconfig',
-      '.jshintrc'
+      '.jshintrc',
+      'config.toml',
+      'config.prod.toml'
     ]);
   });
 });

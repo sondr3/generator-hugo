@@ -51,6 +51,12 @@ module.exports = yeoman.generators.Base.extend({
     }
   },
 
+  default: function() {
+    this.composeWith('hugo:hugo', {}, {
+      local: require.resolve('../hugo')
+    });
+  },
+
   install: function() {
     this.installDependencies();
   }
