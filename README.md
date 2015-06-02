@@ -1,5 +1,8 @@
 # generator-hugo [![Build Status](https://secure.travis-ci.org/sondr3/generator-hugo.png?branch=master)](https://travis-ci.org/sondr3/generator-hugo)
 
+[![Coverage Status](https://coveralls.io/repos/sondr3/generator-hugo/badge.svg)](https://coveralls.io/r/sondr3/generator-hugo)
+[![Code Climate](https://codeclimate.com/github/sondr3/generator-hugo/badges/gpa.svg)](https://codeclimate.com/github/sondr3/generator-hugo)
+
 > [Yeoman](http://yeoman.io) generator
 
 

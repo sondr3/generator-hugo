@@ -4,7 +4,7 @@ var clor = require('clor');
 var yosay = require('yosay');
 
 module.exports = yeoman.generators.Base.extend({
-  prompting: function () {
+  prompting: function() {
     var done = this.async();
 
     // Have Yeoman greet the user.
@@ -19,7 +19,7 @@ module.exports = yeoman.generators.Base.extend({
       default: true
     }];
 
-    this.prompt(prompts, function (props) {
+    this.prompt(prompts, function(props) {
       this.props = props;
       // To access props later use this.props.someOption;
 
@@ -28,7 +28,7 @@ module.exports = yeoman.generators.Base.extend({
   },
 
   writing: {
-    app: function () {
+    app: function() {
       this.fs.copy(
         this.templatePath('_package.json'),
         this.destinationPath('package.json')
@@ -39,7 +39,7 @@ module.exports = yeoman.generators.Base.extend({
       );
     },
 
-    projectfiles: function () {
+    projectfiles: function() {
       this.fs.copy(
         this.templatePath('editorconfig'),
         this.destinationPath('.editorconfig')
@@ -51,7 +51,7 @@ module.exports = yeoman.generators.Base.extend({
     }
   },
 
-  install: function () {
+  install: function() {
     this.installDependencies();
   }
 });
