@@ -14,9 +14,10 @@ describe('hugo:app', function() {
 
   it('creates files', function() {
     assert.file([
-      'bower.json',
-      'package.json',
       '.editorconfig',
+      '.gitattributes',
+      '.gitignore',
+      '.jscsrc',
       '.jshintrc',
       'config.toml',
       'config.prod.toml'

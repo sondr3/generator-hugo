@@ -13,6 +13,7 @@ var handleErr = function(err) {
 function style() {
   return gulp.src([
     'test/*.js',
+    'test/tmp/**/*.js',
     'generators/**/index.js',
     'gulpfile.js',
     'index.js'
@@ -31,9 +32,7 @@ function test(done) {
     'generators/**/index.js',
     'index.js'
   ])
-  .pipe($.istanbul({
-    includeUntested: true
-  }))
+  .pipe($.istanbul())
   .pipe($.istanbul.hookRequire())
   .on('finish', function() {
     gulp.src(['test/*.js'])
