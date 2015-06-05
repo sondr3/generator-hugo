@@ -1,9 +1,9 @@
 {
   "name": "generator-hugo",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Yeoman generator",
   "license": "MIT",
-  "main": "app/index.js",
+  "main": "index.js",
   "repository": "sondr3/generator-hugo",
   "author": {
     "name": "Sondre Nilsen",
@@ -14,10 +14,12 @@
     "test": "gulp"
   },
   "files": [
+    "index.js",
     "generators"
   ],
   "keywords": [
-    "yeoman-generator"
+    "yeoman-generator",
+    "hugo"
   ],
   "dependencies": {
     "chalk": "^1.0.0",
