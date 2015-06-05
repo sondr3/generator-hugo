@@ -57,21 +57,6 @@ module.exports = generator.Base.extend({
                      '\n  none:   /:categories/:title.html')) + '\n',
       choices: ['pretty', 'date', 'none'],
       store: true
-    }, {
-      name: 'pagination',
-      message: 'How many posts do you want to show on your front page?' +
-        chalk.red('\nMust be a number or all'),
-      store: true,
-      default: 10,
-      validate: function(input) {
-        if (/^[0-9]*$/.test(input)) {
-          return true;
-        }
-        if (/^all*$/i.test(input)) {
-          return true;
-        }
-        return 'Must be a number or all';
-      }
     }];
 
     this.prompt(prompts, function(props) {
@@ -118,8 +103,7 @@ module.exports = generator.Base.extend({
         authorEmail: this.props.authorEmail,
         authorBio: this.props.authorBio,
         authorTwitter: this.props.authorTwitter,
-        permalinks: this.props.permalinks,
-        pagination: this.props.pagination
+        permalinks: this.props.permalinks
       }
     }, {
       local: require.resolve('../hugo')

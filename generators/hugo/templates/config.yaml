@@ -1,0 +1,22 @@
+baseurl: "localhost"
+MetaDataFormat: "yaml"
+title: "<%= projectName %>"
+
+publishdir: "dist"
+
+# Site settings
+params:
+  Description: "<%= projectDescription %>"
+  AuthorName: "<%= authorName %>"
+  AuthorBio: "<%= authorBio %>"
+  AuthorEmail: "<%= authorEmail %>"
+  AuthorTwitter: "<%= authorTwitter %>"
+
+# Markdown settings
+blackfriday:
+  fractions: true
+  plainIdAnchors: true
+
+# Settings for development
+buildDrafts: true
+buildFuture: true

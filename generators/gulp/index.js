@@ -54,7 +54,7 @@ module.exports = generators.Base.extend({
       });
 
       if (this.options.uploading === 'Amazon S3') {
-        pkg.devDependencies['gulp-awspublish'] = '^0.1.0';
+        pkg.devDependencies['gulp-awspublish'] = '^2.0.0';
         pkg.devDependencies['gulp-awspublish-router'] = '^0.1.0';
         pkg.devDependencies['concurrent-transform'] = '^1.0.0';
       }

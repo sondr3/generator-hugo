@@ -31,8 +31,7 @@ describe('hugo:app', function() {
       authorBio: 'A norwegian dude',
       authorTwitter: '0lanordmann',
       uploading: 'None',
-      permalinks: 'pretty',
-      pagination: '10'
+      permalinks: 'pretty'
     };
     helpers.run(path.join(__dirname, '../generators/app'))
       .inDir(path.join(__dirname, 'tmp/app'))
@@ -47,8 +46,8 @@ describe('hugo:app', function() {
       '.gitignore',
       '.jscsrc',
       '.jshintrc',
-      'config.toml',
-      'config.prod.toml',
+      'config.yaml',
+      'config.prod.yaml',
       'gulpfile.js',
       'package.json'
     ]);
