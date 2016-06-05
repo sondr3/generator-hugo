@@ -1,7 +1,4 @@
-# generator-hugo [![Build Status](https://secure.travis-ci.org/sondr3/generator-hugo.png?branch=master)](https://travis-ci.org/sondr3/generator-hugo)
-
-[![Coverage Status](https://coveralls.io/repos/sondr3/generator-hugo/badge.svg)](https://coveralls.io/r/sondr3/generator-hugo)
-[![Code Climate](https://codeclimate.com/github/sondr3/generator-hugo/badges/gpa.svg)](https://codeclimate.com/github/sondr3/generator-hugo)
+# generator-hugo [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Coverage percentage][coveralls-image]][coveralls-url]
 
 > [Yeoman](http://yeoman.io) generator
 
@@ -48,3 +45,10 @@ If you'd like to get to know Yeoman better and meet some of his friends, [Grunt]
 ## License
 
 MIT
+
+[npm-image]: https://badge.fury.io/js/generator-hugo.svg
+[npm-url]: https://npmjs.org/package/generator-hugo
+[travis-image]: https://travis-ci.org/sondr3/generator-hugo.svg?branch=master
+[travis-url]: https://travis-ci.org/sondr3/generator-hugo
+[coveralls-image]: https://coveralls.io/repos/sondr3/generator-hugo/badge.svg
+[coveralls-url]: https://coveralls.io/r/sondr3/generator-hugo
