@@ -5,13 +5,13 @@ var assert = require('yeoman-assert');
 var helpers = require('yeoman-test');
 
 test.before(() => {
-  // var deps = [
-  //   [helpers.createDummyGenerator(), 'statisk:git'],
-  //   [helpers.createDummyGenerator(), 'statisk:editorconfig'],
-  //   [helpers.createDummyGenerator(), 'statisk:gulp'],
-  //   [helpers.createDummyGenerator(), 'statisk:readme'],
-  //   [helpers.createDummyGenerator(), 'jekyllized:jekyll']
-  // ];
+  var deps = [
+    [helpers.createDummyGenerator(), 'statisk:git'],
+    [helpers.createDummyGenerator(), 'statisk:editorconfig'],
+    [helpers.createDummyGenerator(), 'statisk:gulp'],
+    [helpers.createDummyGenerator(), 'statisk:readme'],
+    [helpers.createDummyGenerator(), 'hugo:hugo']
+  ];
 
   return helpers.run(path.join(__dirname, '../generators/app'))
     .withPrompts({
@@ -35,10 +35,9 @@ test('generates expected files', () => {
     '.editorconfig',
     '.gitattributes',
     '.gitignore',
-    '.jscsrc',
-    '.jshintrc',
     'config.yaml',
     'config.prod.yaml',
+    'README.md',
     'gulpfile.js',
     'package.json'
   ]);
