@@ -1,23 +1,10 @@
 'use strict';
 
-var chalk = require('chalk');
-var shelljs = require('shelljs');
 var generators = require('yeoman-generator');
 
 module.exports = generators.Base.extend({
-  constructor: function() {
+  constructor: function () {
     generators.Base.apply(this, arguments);
-
-    var dependenciesInstalled = ['hugo'].every(function(depend) {
-      return shelljs.which(depend);
-    });
-
-    if (!dependenciesInstalled) {
-      this.log(chalk.red('HUGO NOT FOUND:') +
-          '\nEither it\'s not installed or missing from $PATH.' +
-          '\nMake sure it\'s properly installed.');
-      shelljs.exit(1);
-    }
 
     this.option('projectName', {
       type: String,
@@ -68,7 +55,7 @@ module.exports = generators.Base.extend({
     });
   },
 
-  writing: function() {
+  writing: function () {
     this.fs.copyTpl(
       this.templatePath('config.yaml'),
       this.destinationPath('config.yaml'),
@@ -123,6 +110,5 @@ module.exports = generators.Base.extend({
       this.templatePath('static'),
       this.destinationPath('static')
     );
-
   }
 });
