@@ -14,8 +14,10 @@
     "test": "xo && nyc ava"
   },
   "files": [
-    "index.js",
-    "generators"
+    "generators",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE"
   ],
   "keywords": [
     "yeoman-generator",
